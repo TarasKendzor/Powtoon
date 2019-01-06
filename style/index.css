@@ -1,0 +1,455 @@
+@font-face {
+    font-family: 'muller_regular';
+    src: url(fonts/muller_regular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'muller_bold';
+    src: url(fonts/muller_bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'muller_medium';
+    src: url(fonts/muller_medium.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'visbycf_heavy';
+    src: url(fonts/visbycf_heavy.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'visbycf_bold';
+    src: url(fonts/visbycf_bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'visbycf_light';
+    src: url(fonts/visbycf_light.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'visbycf_thin';
+    src: url(fonts/visbycf_thin.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'visby_extra';
+    src: url(fonts/visby_extra.otf) format("opentype");
+}
+
+@font-face {
+    font-family: 'jack_story';
+    src: url(fonts/cfjack_story_regular.otf) format("opentype");
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0 ;
+    padding: 0 ;
+    max-width: 1920px;
+}
+
+.header {
+    background-image: url(img/heager-background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.header h3 {
+    font-family: 'muller_bold';
+    font-size: 32px;
+    color: #44A09B;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    font-size: 52px;
+    font-family: 'muller_regular';
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.header h2 span {
+    font-family: 'muller_bold';
+}
+
+.logo-header {
+    width: 10.7%;
+    margin-left: 10%;
+}
+
+.logo-header img {
+    width: 100%;
+}
+
+.text-about-training {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.register-button {
+    font-family: 'muller_medium';
+    font-size: 24px;
+    background-color: #fff;
+    border-radius: 0 100px 100px 0;
+    width: fit-content;
+    padding: 2% 7% 2% 10%;
+}
+
+.register-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8141;
+    color: #fff;
+    font-family: 'muller_bold';
+    font-size: 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.register-button a:hover {
+    opacity: 0.8;
+}
+
+.register-button p {
+    margin-top: 0;
+    color: #ff8141;
+    margin-bottom: 15px;
+}
+
+.scroll-down {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+.scroll-down p {
+    font-family: 'visbycf_heavy';
+    font-size: 16px;
+    color: #fff;
+}
+
+.scroll-triangle {
+    width: 59px;
+    height: 60px;
+    position: relative;
+    border-top: 2px solid #fff;
+}
+
+.triangle {
+    position: absolute;
+    margin: auto;
+    top: -20px;
+    left: 0px;
+    right: 0;
+    width: 39px;
+    height: 39px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-video {
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+
+.img-main img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.play-button {
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    background-color: black;
+    opacity: 0.6;
+    height: 90px;
+    width: 90px;
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.play-button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.hover-video {
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+}
+
+.play-button:hover .hover-video {
+    display: block;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.main-content {
+    padding: 3% 7% ;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    text-align: left;
+    font-family: 'VisbyCF Bold';
+    font-size: 22px;
+    margin: 0px;
+}
+
+.main-text h2 {
+    font-family: 'visbycf_bold';
+    font-size: 36px;
+    margin: 0px;
+}
+
+.main-text ul {
+    padding-left: 20px;
+}
+
+.main-text li {
+    list-style-image: url(img/li-loigo-main.png);
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: 'visbycf_light';
+    margin: 0px 0px;
+}
+
+.main-text p {
+    background-image: url(img/heart-main-text.png);
+    background-repeat: no-repeat;
+    background-position: left center ;
+    padding-left: 25px;
+    font-family: 'visbycf_thin';
+    font-size: 18px;
+}
+
+.main-text a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff8141;
+    color: #fff;
+    font-family: 'muller_bold';
+    font-size: 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 12px 15px;
+}
+
+.main-text a:hover {
+    opacity: 0.8;
+}
+
+.footer {
+    background-color: #273D50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14%;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer p {
+    font-family: 'visby_extra';
+    color: #fff;
+    font-size: 36px;
+}
+
+@media screen and (max-width: 1312px) {
+    .header h2 {
+        font-size: 32px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .register-button {
+        font-size: 18px;
+    }
+
+    .register-button a {
+        font-size: 20px;
+    }
+
+    .header h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .text-about-training {
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-content {
+        padding: 2% 7% ;
+    }
+
+    .main-content p {
+        margin: 10px 0px;
+    }
+
+    .main-text a {
+        font-size: 20px;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-text li {
+        padding-bottom: 8px;
+        font-size: 16px;
+    }
+
+    .main-content h2 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .play-button{
+    top: 37%;
+    left: 38%;
+    }
+    .hover-video img {
+        widows: 50px;
+        height: 65px;
+    }
+     .main-text li {
+        padding-bottom: 4px;
+        font-size: 14px;
+    }
+    .main-text ul {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    .main-content h2 {
+        font-size: 18px;
+    }
+    .main-content p{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .main-content a {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 640px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .main-video {
+    width: 100%;
+    height: 100%;
+}
+.play-button{
+    top: 36%;
+    left: 40%;
+    }
+    .main-text {
+        width: 60%;
+        margin-left: 10%;
+    }
+    .main-content a {
+        width: 60%;
+    }
+    .footer{
+        height: 12%;  
+    }
+    .footer p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 480px){
+    .scroll-down p{
+        margin-top: 90px;
+    }
+    .header h2{
+        font-size: 18px;
+        margin: 30px 0px 80px 0px;
+    }
+      .register-button {
+        font-size: 14px;
+    }
+
+    .register-button a {
+        font-size: 14px;
+    }
+    .text-about-training h3 {
+        margin: 50px 0px 30px 0px;
+    }
+}
+@media screen and (max-width: 380px){
+    .scroll-down p{
+        margin-top: 180px;
+    } 
+    .play-button{
+    top: 38%;
+    left: 35%;
+    height: 80px;
+    width: 80px;
+    }
+}
