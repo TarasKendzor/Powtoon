@@ -51,7 +51,10 @@ body {
 }
 
 .header {
-    background-image: url(img/heager-background.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../img/header-background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,14 +65,14 @@ body {
     font-family: 'muller_bold';
     font-size: 32px;
     color: #44A09B;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .header h2 {
     font-size: 52px;
     font-family: 'muller_regular';
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .header h2 span {
@@ -109,11 +112,12 @@ body {
     font-size: 28px;
     border-radius: 30px;
     text-decoration: none;
-    padding: 10px 0;
+    padding: 12px 0 7px 0;
+    transition: 0.3s ease-in-out;
 }
 
 .register-button a:hover {
-    opacity: 0.8;
+    background-color: rgba(255,129,65,0.8);
 }
 
 .register-button p {
@@ -167,6 +171,7 @@ body {
 
 @keyframes scroll {
     0% {
+        transform: translateY(-7px);
         opacity: 0;
     }
 
@@ -176,7 +181,7 @@ body {
     }
 
     100% {
-        transform: translateY(15px);
+        transform: translateY(8px);
         opacity: 0;
     }
 }
@@ -190,11 +195,11 @@ body {
 
 .main-video {
     width: 60%;
-    height: 100%;
     position: relative;
 }
 
 .img-main img {
+    display: flex;
     width: 100%;
     height: 100%;
     opacity: 0.5;
@@ -202,10 +207,10 @@ body {
 
 .play-button {
     position: absolute;
-    top: 42%;
-    left: 42%;
-    background-color: black;
-    opacity: 0.6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
     height: 90px;
     width: 90px;
     padding: 15px;
@@ -224,18 +229,12 @@ body {
 }
 
 .hover-video {
-    display: none;
     position: absolute;
     top: 55%;
     left: 55%;
-}
-
-.play-button:hover .hover-video {
-    display: block;
     margin-top: 40px;
     margin-left: 20px;
 }
-
 .main-content {
     padding: 3% 7% ;
 }
@@ -263,15 +262,15 @@ body {
 }
 
 .main-text li {
-    list-style-image: url(img/li-loigo-main.png);
+    list-style-image: url(../img/li-loigo-main.png);
     padding-bottom: 20px;
     font-size: 18px;
     font-family: 'visbycf_light';
-    margin: 0px 0px;
+    margin: 0;
 }
 
 .main-text p {
-    background-image: url(img/heart-main-text.png);
+    background-image: url(../img/heart-main-text.png);
     background-repeat: no-repeat;
     background-position: left center ;
     padding-left: 25px;
@@ -289,11 +288,12 @@ body {
     font-size: 28px;
     border-radius: 30px;
     text-decoration: none;
-    padding: 12px 15px;
+    padding: 12px 0 7px 0;
+    transition: 0.3s ease-in-out;
 }
 
 .main-text a:hover {
-    opacity: 0.8;
+     background-color: rgba(255,129,65,0.8);
 }
 
 .footer {
@@ -301,7 +301,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 14%;
 }
 
 .footer a {
@@ -363,15 +362,16 @@ body {
     .main-content h2 {
         font-size: 22px;
     }
+    .hover-video img{
+        width: 90px;
+
+    }
 }
 
 @media screen and (max-width: 768px){
-    .play-button{
-    top: 37%;
-    left: 38%;
-    }
+    
     .hover-video img {
-        widows: 50px;
+        width: : 50px;
         height: 65px;
     }
      .main-text li {
@@ -405,10 +405,7 @@ body {
     width: 100%;
     height: 100%;
 }
-.play-button{
-    top: 36%;
-    left: 40%;
-    }
+
     .main-text {
         width: 60%;
         margin-left: 10%;
@@ -422,6 +419,7 @@ body {
     .footer p {
         font-size: 18px;
     }
+
 }
 @media screen and (max-width: 480px){
     .scroll-down p{
@@ -434,6 +432,10 @@ body {
       .register-button {
         font-size: 14px;
     }
+     .hover-video{
+    margin-top: 25px;
+    margin-left: 15px; 
+    }
 
     .register-button a {
         font-size: 14px;
@@ -443,13 +445,31 @@ body {
     }
 }
 @media screen and (max-width: 380px){
+
     .scroll-down p{
         margin-top: 180px;
     } 
     .play-button{
-    top: 38%;
-    left: 35%;
     height: 80px;
     width: 80px;
+    }
+    .hover-video{
+    margin-top: 15px;
+    margin-left: 10px; 
+    }
+}
+@media screen and (max-width: 380px){
+    .play-button{
+        height: 60px;
+        width: 60px;
+    }
+    #triangle-play{
+        height: 30px;
+    }
+    .hover-video img{
+        height: 50px;
+    }
+    .main-content a{
+        font-size: 12px;
     }
 }

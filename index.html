@@ -4,11 +4,12 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style/index.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<title>Powtoon</title>
 	</head>
 	<body>
 		<header class="header">
-			<div class="logo-header"><a href="#"><img src="style/img/logo.png" alt="  Peage Logotype"></a></div>
+			<div class="logo-header"><a href="#"><img src="./img/logo.png" alt="  Peage Logotype"></a></div>
 			<div class="text-about-training">
 				<h3>New Free Training from Ari:</h3>
 				<h2> The Secret to  Easily Crafting <br> a  Mouth -Watering Offer <br>That Your Tribe <span>Cannot Resist</span></h2>
@@ -27,10 +28,14 @@
 		</header>
 		<main class="main">
 			<div class="main-video">
-				<div class="img-main" id="img-main"><img src="style/img/video-poster.png " alt="Video poster"></div>
-				<div class="play-button" id="play-button"> <a href="#"><img src="style/img/triangle-play-video.png" alt="Play"></a>
-				<div class="hover-video"> <img src="style/img/red-arrow.png" alt="Red Arrow"> <img id="red-arrow-info" src="style/img/red-arrow-info.png"  alt="See what this Webinar is all about"></div>
-			</div>
+				<div class="img-main" id="img-main"><img src="./img/video-poster.png " alt="Video poster"></div>
+				<div class="play-button" id="play-button">
+					<a href="#"><img id="triangle-play" src="./img/triangle-play-video.png" alt="Play"></a>
+					<div class="hover-video wow bounceInRight"  data-wow-offset="70" data-wow-duration="2s" data-wow-delay="1s" > 
+						<img  src="./img/red-arrow.png" alt="Red Arrow">
+						<img id="red-arrow-info" class="wow pulse" data-wow-iteration="infinite" data-wow-delay="1s"  src="./img/red-arrow-info.png"  alt="See what this Webinar is all about">
+					</div>
+				</div>
 			
 		</div>
 		<div class="main-text">
@@ -56,5 +61,10 @@
 		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 		crossorigin="anonymous"></script>
 		<script src="script/index.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/graingert-wow/1.2.2/wow.js"></script>
+		<script>
+		new WOW().init();
+		</script>
 	</body>
+</body>
 </html>
